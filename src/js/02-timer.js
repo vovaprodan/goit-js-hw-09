@@ -34,7 +34,7 @@ const options = {
          if (currrentTime < 1000 && currrentTime > 0) {
           clearInterval(timerId);
         }
-        console.log(convertMs(currrentTime))
+        // console.log(convertMs(currrentTime))
   }, 1000);
     }
    
