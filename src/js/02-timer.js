@@ -7,7 +7,7 @@ const hours = document.querySelector('span[data-hours]')
 const minutes = document.querySelector('span[data-minutes]')
 const seconds = document.querySelector('span[data-seconds]')
 let timerId;
-
+ buttonStart.disabled = true;
 
 const options = {
   enableTime: true,
@@ -19,11 +19,12 @@ const options = {
     const date = new Date();
     if (selectedDates[0] < date) {
       window.alert("Please choose a date in the future");
-      buttonStart.disable = true;
-    } else {
-      buttonStart.disable = false;
+    };
+
+    if (selectedDates[0] > date) {
+      buttonStart.disabled = false;
     }
-    function onStartBtn() {
+    function onStartBtn() { 
       timerId = setInterval(() => {
         const currrentDate = new Date();
         const currrentTime = selectedDates[0] - currrentDate;
